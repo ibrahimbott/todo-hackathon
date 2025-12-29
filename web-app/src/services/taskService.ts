@@ -1,6 +1,6 @@
 import { Task, TaskCreate, TaskUpdate } from '../types/task'
 
-const API_BASE_URL = 'http://localhost:8000/api'
+const API_BASE_URL = '/api'
 
 class TaskService {
   async getAllTasks(): Promise<Task[]> {
