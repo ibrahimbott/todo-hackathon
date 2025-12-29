@@ -1,10 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import TaskForm from '@/components/TaskForm'
-import TaskList from '@/components/TaskList'
-import { Task, TaskCreate } from '@/types/task'
-import { taskService } from '@/services/taskService'
+import Link from 'next/link'
+import TaskForm from '../components/TaskForm'
+import TaskList from '../components/TaskList'
+import { Task, TaskCreate } from '../types/task'
+import { taskService } from '../services/taskService'
 
 export default function Home() {
   const [tasks, setTasks] = useState<Task[]>([])

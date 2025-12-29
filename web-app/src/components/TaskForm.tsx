@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Plus } from 'lucide-react'
-import { TaskCreate } from '@/types/task'
+import { TaskCreate } from '../types/task'
 
 interface TaskFormProps {
   onTaskAdded: (task: TaskCreate) => void
