@@ -273,3 +273,13 @@ def health_check():
                 return {"status": "healthy", "database": "connected"}
     except Exception:
         raise HTTPException(status_code=500, detail="Database connection failed")
+
+@app.get("/api/test-db")
+def test_db_connection():
+    try:
+        with get_db_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT 1")
+                return {"status": "success", "message": "Database connection successful"}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Database connection failed: {str(e)}")
