@@ -6,8 +6,8 @@
       "use": "@vercel/python"
     },
     {
-      "src": "package.json",
-      "use": "@vercel/nextjs"
+      "src": "web-app/package.json",
+      "use": "@vercel/next"
     }
   ],
   "rewrites": [
